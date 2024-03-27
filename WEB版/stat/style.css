@@ -10,20 +10,20 @@ body {
 }
 
 #scoreboard {
-    width: 90%; /* 使记分板根据网页大小变化 */
+    width: 90%;
     padding: 20px;
 }
 
 #total-scores {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .team-total {
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 60px;
     font-weight: bold;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -31,42 +31,60 @@ body {
 }
 
 #red-total {
-    background-color: #ff5555; /* 红队颜色 */
+    background-color: #ff5555;
 }
 
 #blue-total {
-    background-color: #5555ff; /* 蓝队颜色 */
+    background-color: #5555ff;
 }
 
 .team-total:hover {
-    transform: scale(1.1); /* 鼠标悬停时放大 */
+    transform: scale(1.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto; /* 表格根据父元素伸缩 */
+    font-size: 30px; 
+}
+
+th {
+    background-color: #eee;
+    padding: 15px 10px;
+}
+
+tr.red-team td, tr.blue-team td {
+    background-color: #ffe5e5;
+    padding: 20px 10px;
+}
+
+tr.blue-team td {
+    background-color: #e5e5ff;
 }
 
 th, td {
-    padding: 10px;
+    border: 1px solid #ddd;
     text-align: center;
 }
 
 input[type="number"] {
-    width: 100%; /* 输入框根据单元格宽度伸缩 */
-    padding: 5px;
+    width: 100%;
+    padding: 8px;
+    font-size: 56px; 
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box; 
 }
 
 button {
     display: block;
-    width: 100%;
+    width: 30%;
     margin-top: 20px;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #FFCF06;
+    font-size: 20px; 
+    font-weight: bold;
+    color: #00204A;
     border: none;
     border-radius: 5px;
     cursor: pointer;

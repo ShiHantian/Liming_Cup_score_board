@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>比赛记分板</title>
-    <link rel="stylesheet" href="style.css"> <!-- 链接CSS文件 -->
+    <link rel="stylesheet" href="style.css"> <!-- 引用CSS文件 -->
 </head>
 <body>
     <div id="scoreboard">
@@ -21,7 +21,8 @@
                 <th>第四关</th>
                 <th>总扣分</th>
             </tr>
-            <tr>
+            <!-- 更新的红队行 -->
+            <tr class="red-team">
                 <td>红队</td>
                 <td><input type="number" class="score red" data-team="red" data-stage="1" value="0"></td>
                 <td><input type="number" class="score red" data-team="red" data-stage="2" value="0"></td>
@@ -29,7 +30,8 @@
                 <td><input type="number" class="score red" data-team="red" data-stage="4" value="0"></td>
                 <td><input type="number" class="penalty red" data-team="red" value="0"></td>
             </tr>
-            <tr>
+            <!-- 更新的蓝队行 -->
+            <tr class="blue-team">
                 <td>蓝队</td>
                 <td><input type="number" class="score blue" data-team="blue" data-stage="1" value="0"></td>
                 <td><input type="number" class="score blue" data-team="blue" data-stage="2" value="0"></td>
@@ -41,6 +43,6 @@
         <button id="reset-btn">重置表格</button>
     </div>
 
-    <script src="script.js"></script> <!-- 链接JavaScript文件 -->
+    <script src="script.js"></script> <!-- 引用JavaScript文件 -->
 </body>
 </html>
