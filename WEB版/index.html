@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    display: flex; /* 使用Flexbox布局 */
+  }
+  .left, .right {
+    flex: 1; /* 使两个子容器平均分配父容器的空间 */
+  }
+  /* 为了清晰显示，给子容器添加一些样式 */
+  .left {
+    background-color: rgb(255, 255, 255);
+  }
+  .right {
+    background-color: rgb(255, 255, 255);
+  }
+  .iframeStyle {
+  width: 100%;
+  height: 100vh; /* 调整这个值以满足你的需求 */
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <!-- 左侧子页面的内容 -->
+    <iframe src="stat\index.html" class="iframeStyle"></iframe>
+  </div>
+  <div class="right">
+    <!-- 右侧子页面的内容 -->
+    <iframe src="timer\index.html" class="iframeStyle"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
+
