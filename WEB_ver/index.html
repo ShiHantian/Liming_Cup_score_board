@@ -2,27 +2,65 @@
 <html>
 <head>
 <style>
+/* 现有样式 */
 .container {
     display: flex; /* 使用Flexbox布局 */
-  }
-  .left, .right {
+}
+.left, .right {
     flex: 1; /* 使两个子容器平均分配父容器的空间 */
-  }
-  /* 为了清晰显示，给子容器添加一些样式 */
-  .left {
+}
+.left {
     background-color: rgb(255, 255, 255);
-  }
-  .right {
+}
+.right {
     background-color: rgb(255, 255, 255);
-  }
-  .iframeStyle {
-  width: 100%;
-  height: 100vh; /* 调整这个值以满足你的需求 */
-  border: none;
+}
+.iframeStyle {
+    width: 100%;
+    height: 100vh; /* 调整这个值以满足你的需求 */
+    border: none;
+}
+.signature {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    color: grey;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 20px
+}
+.signature a {
+    color: #5555FF;
+    text-decoration: none;
+}
+
+/* 新增样式 */
+.logo-container {
+    display: flex; /* 使用Flex布局确保Logo并列显示 */
+    justify-content: space-around; /* Logo之间的空间平均分配 */
+    background-color: white; /* 底色设置为白色 */
+    padding: 20px 0; /* 上下各增加20px的内边距，视觉上更加舒适 */
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 定位到页面顶部 */
+    left: 0; /* 定位到页面左侧 */
+    width: 100%; /* 拉伸以覆盖整个页面宽度 */
+    z-index: 10; /* 确保Logo区域位于其他内容之上 */
+}
+
+.logo-img {
+    max-height: 100px; /* 根据需要调整Logo的大小 */
+    width: auto; /* 保持Logo的宽高比 */
 }
 </style>
 </head>
 <body>
+
+  <div class="logo-container">
+    <img src="src/JI_logo.png" class="logo-img" alt="JI Logo" style="transform: scale(0.7);">
+    <img src="src/liming_cup_logo.png" class="logo-img" alt="Liming Cup Logo" style="transform: scale(1.2);">
+    <img src="src/ZJLM_logo.jpg" class="logo-img" alt="ZJLM Logo" style="transform: scale(0.8);">
+    <img src="src/SSTIA_logo.png" class="logo-img" alt="SSTIA Logo" style="transform: scale(0.8);">
+  </div>
+  
 
 <div class="container">
   <div class="left">
@@ -35,6 +73,9 @@
   </div>
 </div>
 
+<div class="signature">
+    Designed by <a href="https://shihantian.github.io/">Moran</a>
+</div>
+
 </body>
 </html>
-
