@@ -1,4 +1,7 @@
 body {
+    zoom: 80%; /* 初始缩放设置为80%, 以适应奇怪的vercel*/
+}
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -10,6 +13,7 @@ body {
 }
 
 #scoreboard {
+    margin-top: 200px;
     width: 90%;
     padding: 20px;
 }
