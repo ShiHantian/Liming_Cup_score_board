@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const pauseButton = document.getElementById('pause');
     const resetButton = document.getElementById('reset');
     const inputMinutes = document.getElementById('inputMinutes');
-    const audio = new Audio('src/bell.mp3'); // 创建音频对象
+    const audio = new Audio('src/bell.mp3');
 
     function playSound(times) {
         audio.play();
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         if (timeLeft > 0) {
-            playSound(2); // 点击开始时，播放声音文件连续3遍
+            playSound(2);
             startTimer();
         }
     });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resetButton.addEventListener('click', function() {
         clearInterval(countdown);
         displayTime.innerText = '00:00';
-        displayTime.style.color = 'black'; // 重置文字颜色
+        displayTime.style.color = 'black';
         inputMinutes.value = '';
         paused = false;
         timeLeft = 0;
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (timeLeft <= 0) {
                 clearInterval(countdown);
                 paused = false;
-                displayTime.style.color = 'red'; // 时间到，文字变红
-                playSound(1); // 播放声音提示
+                displayTime.style.color = 'red'; // 时间到
+                playSound(1);
             }
         }, 1000);
         paused = false;

@@ -17,9 +17,8 @@ body, html {
 }
 
 input, button {
-    margin: 5px;
+    margin: 40px;
     padding: 10px;
-    font-size: 64px;
     border: none; /* 移除边框 */
     border-radius: 10px; /* 添加圆角 */
     background-color: #004080; /* 深蓝色填充 */
@@ -35,11 +34,15 @@ input {
     margin: 50px;
 }
 
+button {
+    padding: 18px 36px; /* 增加按钮的 padding 来增大按钮的大小 */
+    font-size: 48px; /* 单独设置按钮字体的大小 */
+}
+
 button:hover {
     background-color: #00264b; /* 鼠标悬停时按钮颜色变深 */
 }
 
-/* 新增样式 */
 .timeExpired {
     color: red;
 }
