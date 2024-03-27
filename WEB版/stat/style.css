@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#scoreboard {
+    width: 90%; /* 使记分板根据网页大小变化 */
+    padding: 20px;
+}
+
+#total-scores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.team-total {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+#red-total {
+    background-color: #ff5555; /* 红队颜色 */
+}
+
+#blue-total {
+    background-color: #5555ff; /* 蓝队颜色 */
+}
+
+.team-total:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* 表格根据父元素伸缩 */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 100%; /* 输入框根据单元格宽度伸缩 */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
