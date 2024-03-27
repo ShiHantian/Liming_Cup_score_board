@@ -1,51 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
     let countdown;
-    let paused = false; // 新增标记是否暂停
-    let timeLeft = 0; // 剩余时间
+    let paused = false;
+    let timeLeft = 0;
     const displayTime = document.getElementById('time');
     const startButton = document.getElementById('start');
     const pauseButton = document.getElementById('pause');
     const resetButton = document.getElementById('reset');
     const inputMinutes = document.getElementById('inputMinutes');
+    const audio = new Audio('src/bell.mp3'); // 创建音频对象
+
+    function playSound(times) {
+        audio.play();
+        audio.onended = function() {
+            if (times > 1) {
+                playSound(times - 1);
+            }
+        };
+    }
 
     startButton.addEventListener('click', function() {
-        if (!paused) { // 如果没有暂停，则根据输入的时间开始
+        if (!paused) {
             const minutes = parseInt(inputMinutes.value);
             if (!isNaN(minutes) && minutes > 0) {
-                timeLeft = minutes * 60; // 更新剩余时间
-                inputMinutes.value = ''; // 清空输入框
+                timeLeft = minutes * 60;
+                inputMinutes.value = '';
             }
         }
         if (timeLeft > 0) {
-            startTimer(); // 从剩余时间开始或继续倒计时
+            playSound(2); // 点击开始时，播放声音文件连续3遍
+            startTimer();
         }
     });
 
     pauseButton.addEventListener('click', function() {
         clearInterval(countdown);
-        paused = true; // 设置暂停标记
+        paused = true;
     });
 
     resetButton.addEventListener('click', function() {
         clearInterval(countdown);
         displayTime.innerText = '00:00';
+        displayTime.style.color = 'black'; // 重置文字颜色
         inputMinutes.value = '';
-        paused = false; // 重置暂停标记
-        timeLeft = 0; // 重置剩余时间
+        paused = false;
+        timeLeft = 0;
     });
 
     function startTimer() {
         updateDisplay(timeLeft);
-        clearInterval(countdown); // 清除旧的倒计时（如果有）
+        clearInterval(countdown);
         countdown = setInterval(function() {
             timeLeft--;
             updateDisplay(timeLeft);
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                paused = false; // 重置暂停标记
+                paused = false;
+                displayTime.style.color = 'red'; // 时间到，文字变红
+                playSound(1); // 播放声音提示
             }
         }, 1000);
-        paused = false; // 开始倒计时后重置暂停标记
+        paused = false;
     }
 
     function updateDisplay(seconds) {

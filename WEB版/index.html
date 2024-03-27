@@ -10,11 +10,17 @@
     <div id="timer">
         <div id="time">00:00</div>
         <input type="number" id="inputMinutes" placeholder="输入分钟">
-        <button id="start">开始</button>
-        <button id="pause">暂停</button>
-        <button id="reset">重置</button>
+        <!-- 将按钮移动到输入框下方 -->
+        <div id="buttons">
+            <button id="start">开始</button>
+            <button id="pause">暂停</button>
+            <button id="reset">重置</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
+
+    <audio id="alarmSound" src="src\electronic-alarm-clock.mp3" type="audio/mp3"></audio>
+
 </body>
 </html>

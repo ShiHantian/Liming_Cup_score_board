@@ -19,4 +19,26 @@ input, button {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
+    border: none; /* 移除边框 */
+    border-radius: 10px; /* 添加圆角 */
+    background-color: #004080; /* 深蓝色填充 */
+    color: white; /* 白色文字 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
 }
+
+input {
+    border: 1px solid #ccc; /* 给输入框添加边框 */
+    background-color: white; /* 输入框背景色为白色 */
+    color: black; /* 输入框文字颜色为黑色 */
+}
+
+button:hover {
+    background-color: #003366; /* 鼠标悬停时按钮颜色变深 */
+}
+
+/* 新增样式 */
+.timeExpired {
+    color: red;
+}
+
+
