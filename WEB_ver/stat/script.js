@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        redTotalElement.textContent = `红队总分: ${redScore}`;
-        blueTotalElement.textContent = `蓝队总分: ${blueScore}`;
+        redTotalElement.textContent = `RED Total: ${redScore}`;
+        blueTotalElement.textContent = `BLUE Total: ${blueScore}`;
     }
 
     // 当分数输入框的值发生变化时，更新总分

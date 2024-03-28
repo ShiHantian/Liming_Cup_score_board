@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>比赛记分板</title>
+    <title>Score Board</title>
     <link rel="stylesheet" href="style.css"> <!-- 引用CSS文件 -->
 </head>
 <body>
     <div id="scoreboard">
         <div id="total-scores">
-            <div id="red-total" class="team-total">红队总分: 0</div>
-            <div id="blue-total" class="team-total">蓝队总分: 0</div>
+            <div id="red-total" class="team-total">RED Total: 0</div>
+            <div id="blue-total" class="team-total">BLUE Total: 0</div>
         </div>
         <table>
             <tr>
-                <th>队伍</th>
-                <th>第一关</th>
-                <th>第二关</th>
-                <th>第三关</th>
-                <th>第四关</th>
-                <th>总扣分</th>
+                <th>Team</th>
+                <th>Game 1</th>
+                <th>Game 2</th>
+                <th>Game 3</th>
+                <th>Game 4</th>
+                <th>Deduction</th>
             </tr>
             <!-- 更新的红队行 -->
             <tr class="red-team">
-                <td>红队</td>
+                <td>Team RED</td>
                 <td><input type="number" class="score red" data-team="red" data-stage="1" value="0"></td>
                 <td><input type="number" class="score red" data-team="red" data-stage="2" value="0"></td>
                 <td><input type="number" class="score red" data-team="red" data-stage="3" value="0"></td>
@@ -32,7 +32,7 @@
             </tr>
             <!-- 更新的蓝队行 -->
             <tr class="blue-team">
-                <td>蓝队</td>
+                <td>Team BLUE</td>
                 <td><input type="number" class="score blue" data-team="blue" data-stage="1" value="0"></td>
                 <td><input type="number" class="score blue" data-team="blue" data-stage="2" value="0"></td>
                 <td><input type="number" class="score blue" data-team="blue" data-stage="3" value="0"></td>
@@ -40,7 +40,7 @@
                 <td><input type="number" class="penalty blue" data-team="blue" value="0"></td>
             </tr>
         </table>
-        <button id="reset-btn">重置表格</button>
+        <button id="reset-btn">Reset Table</button>
     </div>
 
     <script src="script.js"></script> <!-- 引用JavaScript文件 -->
