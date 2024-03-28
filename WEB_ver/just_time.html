@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .logo-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo-img {
+            max-height: 100px;
+            /* 初始最大高度 */
+            width: auto;
+            transition: max-height 0.5s ease;
+            /* 平滑过渡效果 */
+        }
+
+        .iframeStyle {
+            width: 95%;
+            height: calc(100vh - 140px);
+            border: none;
+            position: absolute;
+            top: 120px;
+            z-index: 1;
+        }
+
+        /* 响应式设计：根据屏幕宽度调整Logo大小 */
+        @media (max-width: 768px) {
+            .logo-img {
+                max-height: 75px;
+                /* 屏幕较小时，减小Logo的最大高度 */
+            }
+
+            .iframeStyle {
+                height: calc(100vh - 95px);
+                /* 调整iframe的高度以适应更小的Logo区域 */
+                top: 95px;
+                /* 调整顶部留白 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                max-height: 50px;
+                /* 更小屏幕时，进一步减小Logo的最大高度 */
+            }
+
+            .iframeStyle {
+                height: calc(100vh - 70px);
+                /* 进一步调整iframe的高度 */
+                top: 70px;
+                /* 调整顶部留白 */
+            }
+        }
+        .signature {
+            position: fixed;
+            right: 40px;
+            bottom: 20px;
+            color: grey;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px
+        }
+
+        .signature a {
+            color: #5555FF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo-container">
+        <img src="src/JI_logo.png" class="logo-img" alt="JI Logo" style="transform: scale(0.6);">
+        <img src="src/liming_cup_logo.png" class="logo-img" alt="Liming Cup Logo" style="transform: scale(1.1);">
+        <img src="src/ZJLM_logo.jpg" class="logo-img" alt="ZJLM Logo" style="transform: scale(0.7);">
+        <img src="src/SSTIA_logo.png" class="logo-img" alt="SSTIA Logo" style="transform: scale(0.7);">
+    </div>
+
+    <iframe src="timer/index.html" class="iframeStyle"></iframe>
+
+    <div class="signature">
+        Designed by <a href="https://shihantian.github.io/">Moran</a>
+    </div>
+
+</body>
+
+</html>
