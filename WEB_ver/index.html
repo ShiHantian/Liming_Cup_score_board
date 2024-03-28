@@ -1,117 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page with Logo and Horizontal Buttons</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #FFCB0B; /* 设置黄色为默认背景 */
-  }
-  .triangle-top-left, .triangle-bottom-right {
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
-  .triangle-top-left {
-    border-left: 50vw solid #00274C;
-    border-bottom: 50vh solid transparent;
-  }
-  .triangle-bottom-right {
-    border-right: 50vw solid #00274C;
-    border-top: 50vh solid transparent;
-    bottom: 0;
-    right: 0;
-  }
-  .logo {
-    position: absolute;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: auto;
-  }
-  .buttons-container {
-    position: absolute;
-    top: 60%; /* 按钮组位于页面的中下部 */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex; /* 使用Flex布局使按钮并列 */
-    gap: 40px; /* 按钮之间的间隙 */
-  }
-  .button {
-    width: 300px; /* 固定按钮宽度 */
-    height: 100px; /* 固定按钮高度 */
-    padding: 10px; /* 内边距 */
-    border: none;
-    border-radius: 20px; /* 圆角效果 */
-    background-color: #00274C; /* 蓝色背景 */
-    color: white; /* 白色文字 */
-    font-size: 40px; /* 文字大小 */
-    text-align: center; /* 文字居中 */
-    line-height: 80px; /* 行高，用于垂直居中文本 */
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  .button:hover {
-    transform: scale(1.1); /* 鼠标悬停时放大 */
-    background-color: #003E78; /* 鼠标悬停时变化背景色 */
-  }
-  @keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page with Logo and Horizontal Buttons</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #FFCB0B;
+      /* 设置黄色为默认背景 */
+    }
 
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
+    .triangle-top-left,
+    .triangle-bottom-right {
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+    .triangle-top-left {
+      border-left: 50vw solid #00274C;
+      border-bottom: 50vh solid transparent;
+    }
 
-.triangle-top-left {
-  animation: slideInFromLeft 1s ease-out forwards; /* 从左边飞入 */
-}
+    .triangle-bottom-right {
+      border-right: 50vw solid #00274C;
+      border-top: 50vh solid transparent;
+      bottom: 0;
+      right: 0;
+    }
 
-.triangle-bottom-right {
-  animation: slideInFromRight 1s ease-out forwards; /* 从右边飞入 */
-}
+    .logo {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: auto;
+    }
 
-.logo, .buttons-container {
-  opacity: 0; /* 初始化状态为透明 */
-  animation: fadeIn 1s ease-out 0.7s forwards; /* 在1秒后开始淡入，持续时间为1秒 */
-}
+    .buttons-container {
+      position: absolute;
+      top: 60%;
+      /* 按钮组位于页面的中下部 */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      /* 使用Flex布局使按钮并列 */
+      gap: 40px;
+      /* 按钮之间的间隙 */
+    }
 
-</style>
+    .button {
+      width: 300px;
+      /* 固定按钮宽度 */
+      height: 100px;
+      /* 固定按钮高度 */
+      padding: 10px;
+      /* 内边距 */
+      border: none;
+      border-radius: 20px;
+      /* 圆角效果 */
+      background-color: #00274C;
+      /* 蓝色背景 */
+      color: white;
+      /* 白色文字 */
+      font-size: 40px;
+      /* 文字大小 */
+      text-align: center;
+      /* 文字居中 */
+      line-height: 80px;
+      /* 行高，用于垂直居中文本 */
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      /* 鼠标悬停时放大 */
+      background-color: #003E78;
+      /* 鼠标悬停时变化背景色 */
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInFromRight {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+    .triangle-top-left {
+      animation: slideInFromLeft 1s ease-out forwards;
+      /* 从左边飞入 */
+    }
+
+    .triangle-bottom-right {
+      animation: slideInFromRight 1s ease-out forwards;
+      /* 从右边飞入 */
+    }
+
+    .logo,
+    .buttons-container {
+      opacity: 0;
+      /* 初始化状态为透明 */
+      animation: fadeIn 1s ease-out 0s forwards;
+      /* 在1秒后开始淡入，持续时间为1秒 */
+    }
+
+    .signature {
+      position: fixed;
+      right: 40px;
+      bottom: 20px;
+      color: grey;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 20px
+    }
+
+    .signature a {
+      color: grey;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-<div class="triangle-top-left"></div>
-<div class="triangle-bottom-right"></div>
-<img src="src/liming_cup_logo.png" class="logo" alt="Logo">
-<div class="buttons-container">
-  <button class="button" onclick="location.href='page1.html'">Score Board</button>
-  <button class="button" onclick="location.href='page2.html'">Integrated</button>
-  <button class="button" onclick="location.href='page3.html'">Timer</button>
+  <div class="triangle-top-left"></div>
+  <div class="triangle-bottom-right"></div>
+  <img src="src/liming_cup_logo.png" class="logo" alt="Logo">
+  <div class="buttons-container">
+    <button class="button" onclick="location.href='just_score.html'">Score Board</button>
+    <button class="button" onclick="location.href='integrated.html'">Integrated</button>
+    <button class="button" onclick="location.href='just_time.html'">Timer</button>
+  </div>
+
+  <div class="signature">
+    Designed by <a href="https://shihantian.github.io/">Moran</a>
 </div>
 </body>
+
 </html>
