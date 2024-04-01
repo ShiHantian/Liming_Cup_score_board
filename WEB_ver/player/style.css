@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.player {
+    text-align: center;
+}
+
+.cover {
+    width:30px; /* 更小的尺寸 */
+    height: 30px; /* 与宽度相同，以形成完美的圆形 */
+    border-radius: 50%; /* 产生圆形效果 */
+    object-fit: cover;
+    margin-bottom: -5px;
+    animation: rotation 10s infinite linear;
+    animation-play-state: paused; /* 默认情况下暂停 */
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem; /* 调整图标大小 */
+    color: #333; /* 图标默认颜色 */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* 平滑的变换效果 */
+    transform-origin: center; 
+}
+
+button:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+
+.rotating {
+    animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
