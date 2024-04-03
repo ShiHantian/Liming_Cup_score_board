@@ -29,16 +29,16 @@ body {
 }
 
 #leftSection {
-    background-color: #ffcccc;
+    background-color: white;
 }
 
 #rightSection {
-    background-color: #ccccff;
+    background-color: white;
 }
 
 /* 队伍标题样式 */
 .team h2 {
-    font-size: 80px; /* 标题大小 */
+    font-size: 100px; /* 标题大小 */
     margin-bottom: 20px; /* 标题与得分板之间的距离 */
     color: #000; /* 默认颜色，下面会分别设置 */
 }
@@ -58,7 +58,7 @@ body {
 
 
 .score {
-    font-size: 150px;
+    font-size: 180px;
     margin: 20px 0;
 }
 
@@ -101,6 +101,6 @@ body {
     top: 0;
     width: 20%; /* 渐变条带的宽度，可以根据需要调整 */
     height: 100vh;
-    background: linear-gradient(to right, #ffcccc, #ccccff);
+    background: linear-gradient(to right, white, white);
     transform: translateX(-50%); /* 确保条带精确居中 */
 }
