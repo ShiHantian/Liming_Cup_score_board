@@ -1,99 +1,106 @@
 body {
-    zoom: 80%; /* 初始缩放设置为80%, 以适应奇怪的vercel*/
-}
-body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #ffffff;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* 添加渐变背景 */
+    background: linear-gradient(to right, #ffcccc 50%, #ccccff 50%);
+}
+
+
+.team-section {
+    width: 50%;
+    height: 100vh; /* 使每个队伍区域高度填满视窗 */
+    display: flex;
+    flex-direction: column; /* 列方向排布子元素 */
+    justify-content: center; /* 子元素垂直居中 */
+    align-items: center; /* 子元素水平居中 */
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100%;
 }
 
-#scoreboard {
-    margin-top: 200px;
-    width: 90%;
-    padding: 20px;
+#leftSection {
+    background-color: #ffcccc;
 }
 
-#total-scores {
+#rightSection {
+    background-color: #ccccff;
+}
+
+/* 队伍标题样式 */
+.team h2 {
+    font-size: 80px; /* 标题大小 */
+    margin-bottom: 20px; /* 标题与得分板之间的距离 */
+    color: #000; /* 默认颜色，下面会分别设置 */
+}
+
+
+/* 红队样式调整 */
+#leftSection .team h2 {
+    color: red; /* 红队标题颜色 */
+    /* 如果需要调整红队标题的具体位置或大小，请在这里添加 */
+}
+
+/* 蓝队样式调整 */
+#rightSection .team h2 {
+    color: blue; /* 蓝队标题颜色 */
+    /* 如果需要调整蓝队标题的具体位置或大小，请在这里添加 */
+}
+
+
+.score {
+    font-size: 150px;
+    margin: 20px 0;
+}
+
+.buttons .row {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
-.team-total {
-    padding: 30px;
-    border-radius: 10px;
-    font-size: 60px;
-    font-weight: bold;
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-#red-total {
-    background-color: #ff5555;
-}
-
-#blue-total {
-    background-color: #5555ff;
-}
-
-.team-total:hover {
-    transform: scale(1.1);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 30px; 
-}
-
-th {
-    background-color: #eee;
-    padding: 15px 10px;
-}
-
-tr.red-team td, tr.blue-team td {
-    background-color: #ffe5e5;
-    padding: 20px 10px;
-}
-
-tr.blue-team td {
-    background-color: #e5e5ff;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 56px; 
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; 
-}
-
-button {
-    display: block;
-    width: 30%;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #FFCF06;
-    font-size: 30px; 
-    font-weight: bold;
-    color: #00204A;
-    border: none;
-    border-radius: 5px;
+.button, .reset {
+    margin: 5px;
+    padding: 10px 0;
+    width: 120px;
+    font-size: 32px;
     cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #dfb50e; /* 鼠标悬停时按钮颜色变深 */
+#redTeam .button {
+    background-color: red;
+}
+
+#blueTeam .button {
+    background-color: blue;
+}
+
+.reset {
+    background-color: #FED400;
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+}
+
+.gradient-strip {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20%; /* 渐变条带的宽度，可以根据需要调整 */
+    height: 100vh;
+    background: linear-gradient(to right, #ffcccc, #ccccff);
+    transform: translateX(-50%); /* 确保条带精确居中 */
 }

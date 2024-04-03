@@ -4,45 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Board</title>
-    <link rel="stylesheet" href="style.css"> <!-- 引用CSS文件 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="scoreboard">
-        <div id="total-scores">
-            <div id="red-total" class="team-total">RED Total: 0</div>
-            <div id="blue-total" class="team-total">BLUE Total: 0</div>
+    <div class="team-section" id="leftSection">
+        <div class="team" id="redTeam">
+            <h2>RED</h2>
+            <div class="score" id="redScore">0</div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="button" onclick="modifyScore('red', -5)">-5</button>
+                    <button class="button" onclick="modifyScore('red', -10)">-10</button>
+                    <button class="button" onclick="modifyScore('red', -15)">-15</button>
+                </div>
+                <div class="row">
+                    <button class="button undoButton" onclick="undoScore('red')">Undo</button>
+                </div>
+            </div>
         </div>
-        <table>
-            <tr>
-                <th>Team</th>
-                <th>Game 1</th>
-                <th>Game 2</th>
-                <th>Game 3</th>
-                <th>Game 4</th>
-                <th>Deduction</th>
-            </tr>
-            <!-- 更新的红队行 -->
-            <tr class="red-team">
-                <td>Team RED</td>
-                <td><input type="number" class="score red" data-team="red" data-stage="1" value="0"></td>
-                <td><input type="number" class="score red" data-team="red" data-stage="2" value="0"></td>
-                <td><input type="number" class="score red" data-team="red" data-stage="3" value="0"></td>
-                <td><input type="number" class="score red" data-team="red" data-stage="4" value="0"></td>
-                <td><input type="number" class="penalty red" data-team="red" value="0"></td>
-            </tr>
-            <!-- 更新的蓝队行 -->
-            <tr class="blue-team">
-                <td>Team BLUE</td>
-                <td><input type="number" class="score blue" data-team="blue" data-stage="1" value="0"></td>
-                <td><input type="number" class="score blue" data-team="blue" data-stage="2" value="0"></td>
-                <td><input type="number" class="score blue" data-team="blue" data-stage="3" value="0"></td>
-                <td><input type="number" class="score blue" data-team="blue" data-stage="4" value="0"></td>
-                <td><input type="number" class="penalty blue" data-team="blue" value="0"></td>
-            </tr>
-        </table>
-        <button id="reset-btn">Reset Table</button>
     </div>
+    <div class="team-section" id="rightSection">
+        <div class="team" id="blueTeam">
+            <h2>BLUE</h2>
+            <div class="score" id="blueScore">0</div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="button" onclick="modifyScore('blue', -5)">-5</button>
+                    <button class="button" onclick="modifyScore('blue', -10)">-10</button>
+                    <button class="button" onclick="modifyScore('blue', -15)">-15</button>
+                </div>
+                <div class="row">
+                    <button class="button undoButton" onclick="undoScore('blue')">Undo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gradient-strip"></div>
+    <button class="reset" onclick="resetScores()">Reset</button>
 
-    <script src="script.js"></script> <!-- 引用JavaScript文件 -->
+    <script src="script.js"></script>
 </body>
 </html>
