@@ -1,6 +1,6 @@
 const songs = [
-    { src: 'src/Against the Current,Alan Walker - Legends Never Die (Alan Walker Remix).mp3', cover: 'src/LND.png' },
-    { src: 'src/Ed Sheeran,Chris Stapleton,Bruno Mars - BLOW.mp3', cover: 'src/B.png' }
+    { src: 'src/Legends Never Die.mp3', cover: 'src/Legends Never Die.png' },
+    { src: 'src/BLOW.mp3', cover: 'src/BLOW.png' }
 ];
 
 let currentSong = 0;

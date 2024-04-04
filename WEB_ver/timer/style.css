@@ -50,4 +50,67 @@ button:hover {
     color: red;
 }
 
+.player {
+    position: absolute; /* 或者 position: absolute; 根据你的需求选择 */
+    bottom: 15vh; 
+    right: 30vw; 
+    text-align: center;
+}
+
+.cover {
+    width:64px; /* 更小的尺寸 */
+    height: 64px; /* 与宽度相同，以形成完美的圆形 */
+    border-radius: 50%; /* 产生圆形效果 */
+    object-fit: cover;
+    margin-bottom: -13px;
+    animation: rotation 10s infinite linear;
+    animation-play-state: paused; /* 默认情况下暂停 */
+}
+
+
+button:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+
+.rotating {
+    animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 调整播放器按钮之间的距离 */
+.play, .next {
+    margin-left: 10px; /* 在按钮左侧添加间隔 */
+    margin-right: 10px; /* 在按钮右侧添加间隔 */
+    background: none !important; /* 确保没有背景 */
+    border: none !important; /* 移除边框 */
+    padding: 0 !important; /* 移除内边距 */
+    box-shadow: none !important; /* 移除阴影 */
+    outline: none !important; /* 移除轮廓 */
+}
+
+.play {
+    margin-left: 20px; /* 在按钮左侧添加间隔 */
+}
+
+
+
+.play i, .next i {
+    color: #333; /* 设置图标颜色 */
+    font-size: 48px; /* 调整图标大小 */
+    transition: color 0.3s; /* 平滑颜色变化效果 */
+}
+
+.play:hover i, .next:hover i {
+    color: #666 !important; /* 悬停时改变图标颜色 */
+}
+
 
