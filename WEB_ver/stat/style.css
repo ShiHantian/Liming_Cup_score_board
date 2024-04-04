@@ -3,12 +3,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     margin: 0;
     padding: 0;
-    /* 添加渐变背景 */
     background: linear-gradient(to right, #ffcccc 50%, #ccccff 50%);
+    transform: translateY(-20px); /* 向上平移所有元素，根据需要调整此值 */
 }
+
 
 
 .team-section {
