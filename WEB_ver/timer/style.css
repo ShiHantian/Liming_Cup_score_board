@@ -2,7 +2,6 @@ body {
     zoom: 80%; /* 初始缩放设置为80%, 以适应奇怪的vercel*/
 }
 body, html {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,9 +51,10 @@ button:hover {
 
 .player {
     position: absolute; /* 或者 position: absolute; 根据你的需求选择 */
-    bottom: 15vh; 
+    bottom: 0vh; 
     right: 30vw; 
     text-align: center;
+    z-index: 2;
 }
 
 .cover {
@@ -113,4 +113,12 @@ button:hover {
     color: #666 !important; /* 悬停时改变图标颜色 */
 }
 
-
+.color-bar {
+    position: fixed; /* 固定位置，确保色条总是出现在页面底部 */
+    bottom: 0; /* 距离页面底部0 */
+    left: 0; /* 距离页面左侧0 */
+    width: 100%; /* 色条宽度占满整个页面宽度 */
+    height: 12vh; /* 色条的高度，根据需要调整 */
+    background-color: #FFFACD; /* 设置色条的背景颜色为淡黄色 */
+    z-index: 0; /* 控制图层顺序，数值越大，图层越靠上 */
+}
