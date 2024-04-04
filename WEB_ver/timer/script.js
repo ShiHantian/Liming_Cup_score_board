@@ -12,11 +12,11 @@ const audio_bell = new Audio('src/bell.mp3');
 ///Player part//////////////////////////////////////////////////////////////
 
 const songs = [
-    { src: 'src/Legends Never Die_cut.mp3', cover: 'src/Legends Never Die.png' },
-    { src: 'src/BLOW.mp3', cover: 'src/BLOW.png' },
     { src: 'src/The Phoenix.mp3', cover: 'src/The Phoenix.png' },
+    { src: 'src/PARANOIA.mp3', cover: 'src/PARANOIA.png' },
     { src: 'src/Spectre_cut.mp3', cover: 'src/Spectre.png' },
-    { src: 'src/PARANOIA.mp3', cover: 'src/PARANOIA.png' }
+    { src: 'src/BLOW.mp3', cover: 'src/BLOW.png' },
+    { src: 'src/Legends Never Die_cut.mp3', cover: 'src/Legends Never Die.png' }
 ];
 
 let currentSong = 0;
